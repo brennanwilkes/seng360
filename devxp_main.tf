@@ -7,7 +7,7 @@ terraform {
 }
 
 resource "aws_instance" "Instance-dwcq-a" {
-      ami = data.aws_ami.ubuntu_latest.id
+      ami = "ami-060813e3c5fa126ab"
       instance_type = "t2.medium"
       lifecycle {
         ignore_changes = [ami]
@@ -61,7 +61,7 @@ resource "aws_iam_access_key" "Instance-dwcq-a_iam_access_key" {
 }
 
 resource "aws_instance" "Instance-dwcq-b" {
-      ami = data.aws_ami.ubuntu_latest.id
+      ami = "ami-060813e3c5fa126ab"
       instance_type = "t2.medium"
       lifecycle {
         ignore_changes = [ami]
